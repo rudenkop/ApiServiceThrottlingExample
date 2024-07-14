@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace CleoAssignment.ApiService;
+namespace CleoAssignment.ApiService.Intrefaces;
 
 public interface IApiService<TResource>
 {

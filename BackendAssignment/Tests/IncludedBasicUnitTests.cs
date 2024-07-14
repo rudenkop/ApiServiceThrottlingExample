@@ -1,8 +1,9 @@
-﻿using CleoAssignment.ApiService;
-using System;
+﻿using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Xunit;
+using CleoAssignment.ApiService;
+using CleoAssignment.ApiService.Intrefaces;
 
 namespace CleoAssignment.Tests;
 
@@ -102,6 +103,7 @@ public class IncludedBasicUnitTests
     private class InjectedResourceProvider<TResource> : IResourceProvider<TResource>
     {
         private readonly Func<string, TResource> _getResource;
+        private readonly Func<string, TResource> _getResourceAsync;
         private readonly Action<string, TResource> _addOrUpdateResource;
 
         public InjectedResourceProvider(Func<string, TResource> getResourceFunc,
@@ -112,7 +114,6 @@ public class IncludedBasicUnitTests
         }
 
         public TResource GetResource(string id) => _getResource(id);
-
         public void AddOrUpdateResource(string id, TResource resource) => _addOrUpdateResource(id, resource);
     }
 }

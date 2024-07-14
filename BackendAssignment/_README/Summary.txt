@@ -1,6 +1,6 @@
 
-Name of Assignee:
+Name of Assignee: ing. Pavel Rudenko
 
-Approximate time taken to complete the assignment:
+Approximate time taken to complete the assignment: 5.5 Hrs
 
-One thing that I would suggest to improve about this assignment:
+One thing that I would suggest to improve about this assignment: add logging

@@ -1,6 +1,6 @@
 using System;
 
-namespace CleoAssignment.ApiService;
+namespace CleoAssignment.ApiService.Intrefaces;
 
 public interface ITimeProvider
 {

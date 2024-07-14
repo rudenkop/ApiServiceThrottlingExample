@@ -1,4 +1,4 @@
-﻿using System;
+﻿using CleoAssignment.ApiService.Intrefaces;
 
 namespace CleoAssignment.ApiService;
 
@@ -8,7 +8,6 @@ public static class ApiServiceFactory
                                                      IResourceProvider<T> resourceProvider,
                                                      ITimeProvider timeProvider)
     {
-        // add your constructor/creation logic here
-        throw new NotImplementedException();
+        return ApiService<T>.GetInstance().Configure(resourceProvider, throttleSettings, timeProvider);
     }
 }
